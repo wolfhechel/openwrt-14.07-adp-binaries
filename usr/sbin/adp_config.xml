@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<ADP>
+
+  <Ports>
+    <Port>
+      <Description>eth port</Description>
+      <Name>eth0</Name>
+      <PortId>0</PortId>
+      <PortType>0</PortType>
+      <State>1</State>
+    </Port>
+    <Port>
+      <Description>eth port</Description>
+      <Name>eth1</Name>
+      <PortId>1</PortId>
+      <PortType>0</PortType>
+      <State>1</State>
+    </Port>
+    <Port>
+      <Description>eth port</Description>
+      <Name>eth2</Name>
+      <PortId>2</PortId>
+      <PortType>0</PortType>
+      <State>1</State>
+    </Port>
+    <Port>
+      <Description>wlan port</Description>
+      <Name>wdev0ap0</Name>
+      <PortId>96</PortId>
+      <PortType>3</PortType>
+      <State>0</State>
+    </Port>
+    <Port>
+      <Description>wlan port</Description>
+      <Name>wdev1ap0</Name>
+      <PortId>97</PortId>
+      <PortType>3</PortType>
+      <State>0</State>
+    </Port>
+    <Port>
+      <Description>wlan port</Description>
+      <Name>wdev0sta0</Name>
+      <PortId>98</PortId>
+      <PortType>3</PortType>
+      <State>0</State>
+    </Port>
+    <Port>
+      <Description>wlan port</Description>
+      <Name>wdev1sta0</Name>
+      <PortId>99</PortId>
+      <PortType>3</PortType>
+      <State>0</State>
+    </Port>
+  </Ports>
+
+  <TrafficManagement>
+    <Port>
+      <PortId>0</PortId>
+      <Egress>
+        <TxRate>1000000</TxRate>
+        <TxBurst>16776960</TxBurst>
+        <TxQueues>
+          <TxQueue>
+            <Id>0</Id>
+            <TxRate>1000000</TxRate>
+            <TxBurst>16776960</TxBurst>
+            <TxWrrWeight>0</TxWrrWeight>
+          </TxQueue>
+        </TxQueues>
+      </Egress>
+    </Port>
+  </TrafficManagement>
+
+  <Qos>
+    <MarksToCoSMapping>
+      <DefaultCoS>
+        <Port id="0">0</Port>
+        <Port id="1">0</Port>
+        <Port id="2">0</Port>
+        <Port id="96">0</Port>
+        <Port id="97">0</Port>
+        <Port id="98">0</Port>
+        <Port id="99">0</Port>
+      </DefaultCoS>
+      <Mark>
+        <Value>0</Value>
+        <CoS>0</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>0</Value>
+        <CoS>0</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>1</Value>
+        <CoS>1</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>2</Value>
+        <CoS>2</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>3</Value>
+        <CoS>3</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>4</Value>
+        <CoS>4</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>5</Value>
+        <CoS>5</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value>6</Value>
+        <CoS>6</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+      <Mark>
+        <Value min="7" max="15"/>
+        <CoS>7</CoS>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </Mark>
+    </MarksToCoSMapping>
+
+    <CoSToMarkMapping>
+      <CoS>
+        <Value>0</Value>
+        <Mark>0</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>1</Value>
+        <Mark>1</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>2</Value>
+        <Mark>2</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>3</Value>
+        <Mark>3</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>4</Value>
+        <Mark>4</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>5</Value>
+        <Mark>5</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>6</Value>
+        <Mark>6</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+      <CoS>
+        <Value>7</Value>
+        <Mark>7</Mark>
+        <Ports>0,1,2,96,97,98,99</Ports>
+      </CoS>
+    </CoSToMarkMapping>
+  </Qos>
+
+  <FlowTables>
+    <NumberOfIPv4Entries>8192</NumberOfIPv4Entries>
+    <NumberOfIPv6Entries>4096</NumberOfIPv6Entries>
+    <NumberOfL2Entries>2048</NumberOfL2Entries>
+    <NumberOfPPPoETunnels>8</NumberOfPPPoETunnels>
+  </FlowTables>
+
+  <CPUs>
+    <CPU>
+      <Id>0</Id>
+      <MaxCPUUsage>930</MaxCPUUsage>
+    </CPU>
+    <CPU>
+      <Id>1</Id>
+      <MaxCPUUsage>930</MaxCPUUsage>
+    </CPU>
+  </CPUs>
+
+</ADP>
